@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 def index
-    @user = User.new
+   @user = User.new
 end
   
 def t_user
@@ -14,7 +14,7 @@ def t_user
       config.access_token_secret = "9rr3sxGGs2dS8C1jV8XDPGiaXv45ywOv11I8Q9h0IAfmQ"
     end
 
-    @user = User.new(name: client.user.name)
+    @user = client.search("ラーメン").take(3)
 end
 
 end

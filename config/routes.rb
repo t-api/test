@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   
-  get 'users', to: 'users#index'
-  
-  get '/t_user', to: 'users#t_user'
-  post '/t_user', to: 'users#t_user'
-  
   root to: 'users#index'
+  
+  get "t_user" => "users#t_user"
+  post "t_user" => "users#t_user"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

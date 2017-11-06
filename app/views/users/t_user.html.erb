@@ -2,5 +2,8 @@
 
 <table>
   <tr><th>name</th></tr>
-  <td><%= @user.name %></td>
+    <td><%= @user.each do |tweet| %>
+      <%= tweet.text %>
+    <% end %>
+    </td>
 </table>
